@@ -7,6 +7,9 @@ BOARDS = {"main": "1141521905491005624", "estetika": "1141521905491064869", "svo
 BOARD_BY_ID = {"04_seryi_anime": "estetika", "05_seryi_podstavka": "main", "06_semya": "svoe_foto",
                "07_zaichik": "gadzhety", "08_nadpisi": "romantika"}
 Q = "mutation($i:CreatePostInput!){createPost(input:$i){__typename ... on PostActionSuccess{post{id status dueAt}} ... on MutationError{message}}}"
+QB = ("mutation($t:CreatePostInput!,$p:CreatePostInput!){"
+      "tiktok:createPost(input:$t){__typename ... on PostActionSuccess{post{id status dueAt}} ... on MutationError{message}} "
+      "pinterest:createPost(input:$p){__typename ... on PostActionSuccess{post{id status dueAt}} ... on MutationError{message}}}")
 def body(inp): return json.dumps({"query": Q, "variables": {"i": inp}}, ensure_ascii=False)
 d = json.load(open("queue/schedule.json"))
 for e in d:
@@ -24,5 +27,7 @@ for e in d:
         "mode": "customScheduled", "dueAt": e["pinterest_at"], "schedulingType": "automatic",
         "metadata": {"pinterest": {"boardServiceId": BOARDS[board], "title": title[:100],
                      "url": f"https://www.wildberries.ru/catalog/{art}/detail.aspx"}}})
+    tt=json.loads(e["buffer_tiktok"])["variables"]["i"]; pn=json.loads(e["buffer_pinterest"])["variables"]["i"]
+    e["buffer_both"] = json.dumps({"query": QB, "variables": {"t": tt, "p": pn}}, ensure_ascii=False)
 json.dump(d, open("queue/schedule.json", "w"), ensure_ascii=False, indent=1)
 for e in d: print(e["id"], e["date"], "TT", e["tiktok_at"][11:16], "PIN", e["pinterest_at"][11:16], e["board"])
