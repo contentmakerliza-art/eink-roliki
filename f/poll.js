@@ -1,0 +1,2 @@
+const sleep=ms=>new Promise(r=>setTimeout(r,ms)); let s=null, err='';
+for(let i=0;i<9&&!s;i++){ const v=[...document.querySelectorAll('video')].map(v=>v.currentSrc||v.src||v.querySelector('source')?.src).filter(Boolean); s=v[0]||null; if(/error occurred/i.test(document.body.innerText)){err='error';break;} if(!/no music\./.test(document.body.innerText)){err='empty';break;} if(!s) await sleep(4000);} return {s,err};
