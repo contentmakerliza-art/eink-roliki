@@ -10,6 +10,8 @@ Q = "mutation($i:CreatePostInput!){createPost(input:$i){__typename ... on PostAc
 QB = ("mutation($t:CreatePostInput!,$p:CreatePostInput!){"
       "tiktok:createPost(input:$t){__typename ... on PostActionSuccess{post{id status dueAt}} ... on MutationError{message}} "
       "pinterest:createPost(input:$p){__typename ... on PostActionSuccess{post{id status dueAt}} ... on MutationError{message}}}")
+QP = ("mutation($p:CreatePostInput!){"
+      "pinterest:createPost(input:$p){__typename ... on PostActionSuccess{post{id status dueAt}} ... on MutationError{message}}}")
 def body(inp): return json.dumps({"query": Q, "variables": {"i": inp}}, ensure_ascii=False)
 d = json.load(open("queue/schedule.json"))
 for e in d:
@@ -25,9 +27,14 @@ for e in d:
         "metadata": {"tiktok": {"isAiGenerated": False}}})
     e["buffer_pinterest"] = body({"channelId": PIN, "text": e["description"], "assets": [{"video": {"url": e["file_url"]}}],
         "mode": "customScheduled", "dueAt": e["pinterest_at"], "schedulingType": "automatic",
-        "metadata": {"pinterest": {"boardServiceId": BOARDS[board], "title": title[:100],
-                     "url": f"https://www.wildberries.ru/catalog/{art}/detail.aspx"}}})
+        "metadata": {"pinterest": dict({"boardServiceId": BOARDS[board], "title": title[:100]},
+                     **({"url": f"https://www.wildberries.ru/catalog/{art}/detail.aspx"} if e.get("pin_link", True) else {}))}})
     tt=json.loads(e["buffer_tiktok"])["variables"]["i"]; pn=json.loads(e["buffer_pinterest"])["variables"]["i"]
-    e["buffer_both"] = json.dumps({"query": QB, "variables": {"t": tt, "p": pn}}, ensure_ascii=False)
+    if e.get("tiktok_via") == "studio":
+        # TikTok публикуется вручную/через TikTok Studio — в Buffer уходит только Pinterest
+        e["buffer_tiktok"] = json.dumps({"query": "query{__typename}"})
+        e["buffer_both"] = json.dumps({"query": QP, "variables": {"p": pn}}, ensure_ascii=False)
+    else:
+        e["buffer_both"] = json.dumps({"query": QB, "variables": {"t": tt, "p": pn}}, ensure_ascii=False)
 json.dump(d, open("queue/schedule.json", "w"), ensure_ascii=False, indent=1)
 for e in d: print(e["id"], e["date"], "TT", e["tiktok_at"][11:16], "PIN", e["pinterest_at"][11:16], e["board"])
