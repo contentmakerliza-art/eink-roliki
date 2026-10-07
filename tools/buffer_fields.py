@@ -17,7 +17,7 @@ for e in d:
     if "tiktok_at" not in e:
         e["tiktok_at"] = f'{e["date"]}T{rnd.randint(19,20)}:{rnd.randint(0,59):02d}:00+03:00'
         e["pinterest_at"] = f'{e["date"]}T{rnd.randint(20,21)}:{rnd.randint(0,59):02d}:00+03:00'
-    art = re.search(r"арт\.\s*(\d+)", e["description"]).group(1)
+    art = re.search(r"арт\.\s*(?:WB\s*)?(\d+)", e["description"]).group(1)
     title = e["title"].replace("#shorts", "").strip()
     board = e.get("board") or BOARD_BY_ID.get(e["id"], "main"); e["board"] = board
     e["buffer_tiktok"] = body({"channelId": TT, "text": e["description"], "assets": [{"video": {"url": e["file_url"]}}],
