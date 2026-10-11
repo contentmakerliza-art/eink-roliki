@@ -1,0 +1,65 @@
+name: Дашборд — выгрузка данных роликов из n8n
+
+# Раз в час забирает CSV из n8n-сценария «Дашборд: данные роликов (только чтение)»
+# и кладёт его в dashboard/videos.csv. Автообновление дашборда «Контент-завод»
+# читает этот файл отсюда (облако Claude не может обращаться к n8n напрямую).
+
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dash-feed
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Забрать CSV из n8n
+        run: |
+          set -euo pipefail
+          curl -fsS --retry 3 --retry-delay 10 -m 60 \
+            "https://n8n.berdykina.ru/webhook/dash-feed-0b647337fd88?t=$(date +%s)" \
+            -o /tmp/videos.csv
+
+      - name: Проверить формат
+        run: |
+          python3 - <<'PY'
+          import csv, sys
+          t = open('/tmp/videos.csv', encoding='utf-8').read()
+          rows = list(csv.reader(t.splitlines()))
+          want = ['id','product','title','date','approval','comment','youtube','slot','tiktok','reserve']
+          if not rows or rows[0] != want:
+              sys.exit('Неверный заголовок: %r' % (rows[0] if rows else None))
+          bad = [i for i, r in enumerate(rows) if len(r) != len(want)]
+          if bad:
+              sys.exit('Строки с неверным числом полей: %r' % bad[:10])
+          if len(rows) - 1 < 10:
+              sys.exit('Слишком мало строк: %d' % (len(rows) - 1))
+          print('OK:', len(rows) - 1, 'строк')
+          PY
+
+      - name: Сохранить, если изменилось
+        run: |
+          set -euo pipefail
+          mkdir -p dashboard
+          cp /tmp/videos.csv dashboard/videos.csv
+          date -u +%Y-%m-%dT%H:%M:%SZ > dashboard/videos.updated
+          git add dashboard/videos.csv
+          if git diff --cached --quiet; then
+            echo "Данные не изменились"
+            exit 0
+          fi
+          git add dashboard/videos.updated
+          git config user.name "dash-feed bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Дашборд: данные роликов $(date -u +%Y-%m-%dT%H:%MZ)"
+          git pull --rebase --quiet
+          git push
