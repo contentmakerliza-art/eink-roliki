@@ -168,10 +168,10 @@
   "buffer_both": "{\"query\": \"mutation($i:CreatePostInput!){createPost(input:$i){__typename ... on PostActionSuccess{post{id status dueAt}} ... on MutationError{message}}}\", \"variables\": {\"i\": {\"channelId\": \"6acf626e778b240e2f06a42e\", \"text\": \"Мини-монитор для селфи — крепится на телефон и показывает, как ты выглядишь в кадре основной камеры.\\n\\nWB, арт. 929672116\\nOzon, арт. 3941041946\\n\\n#находкисвб #мониторселфи #селфи #гаджеты\", \"assets\": [{\"video\": {\"url\": \"https://raw.githubusercontent.com/contentmakerliza-art/eink-roliki/main/monitors/mini_13v_man.mp4\"}}], \"mode\": \"customScheduled\", \"dueAt\": \"2026-10-21T21:33:00+03:00\", \"schedulingType\": \"automatic\", \"metadata\": {\"pinterest\": {\"boardServiceId\": \"1092334153311701760\", \"title\": \"Себя видно и на селфи, и на видео 🤳\", \"url\": \"https://wildberries.ru/catalog/0/search.aspx?search=WW1242481\"}}}}}"
  },
  {
-  "id": "MON_mini_16v_mirror",
+  "id": "MON_mini_17_unbox_plants",
   "date": "2026-10-22",
-  "file_url": "https://raw.githubusercontent.com/contentmakerliza-art/eink-roliki/main/monitors/mini_16v_mirror.mp4",
-  "title": "Больше никаких кривых селфи на основную камеру #shorts",
+  "file_url": "https://raw.githubusercontent.com/contentmakerliza-art/eink-roliki/main/monitors/mini_17_unbox_plants.mp4",
+  "title": "Распаковала — и теперь снимаю себя на основную камеру ✨ #shorts",
   "description": "Мини-монитор для селфи — крепится на телефон и показывает, как ты выглядишь в кадре основной камеры.\n\nWB, арт. 929672116\nOzon, арт. 3941041946\n\n#находкисвб #мониторселфи #селфи #гаджеты",
   "publish_at": "2026-10-22T19:08:00+03:00",
   "board": "main",
