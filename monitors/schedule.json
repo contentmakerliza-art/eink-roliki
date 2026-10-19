@@ -140,6 +140,20 @@
   "buffer_both": "{\"query\": \"mutation($i:CreatePostInput!){createPost(input:$i){__typename ... on PostActionSuccess{post{id status dueAt}} ... on MutationError{message}}}\", \"variables\": {\"i\": {\"channelId\": \"6acf626e778b240e2f06a42e\", \"text\": \"Мини-монитор для селфи — крепится на телефон и показывает, как ты выглядишь в кадре основной камеры.\\n\\nWB, арт. 929672116\\nOzon, арт. 3941041946\\n\\n#находкисвб #мониторселфи #селфи #гаджеты\", \"assets\": [{\"video\": {\"url\": \"https://raw.githubusercontent.com/contentmakerliza-art/eink-roliki/main/monitors/mini_16_mirror.mp4\"}}], \"mode\": \"customScheduled\", \"dueAt\": \"2026-10-19T21:55:00+03:00\", \"schedulingType\": \"automatic\", \"metadata\": {\"pinterest\": {\"boardServiceId\": \"1092334153311701760\", \"title\": \"Магнит щёлк — и видишь себя на основной камере ✨\", \"url\": \"https://wildberries.ru/catalog/0/search.aspx?search=WW1242481\"}}}}}"
  },
  {
+  "id": "MON_mini_16v_mirror",
+  "date": "2026-10-20",
+  "file_url": "https://raw.githubusercontent.com/contentmakerliza-art/eink-roliki/main/monitors/mini_16w_mirror.mp4",
+  "title": "Снимаю себя на основную камеру — и вижу кадр 🪞 #shorts",
+  "description": "Мини-монитор для селфи — крепится на телефон и показывает, как ты выглядишь в кадре основной камеры.\n\nWB, арт. 929672116\nOzon, арт. 3941041946\n\n#находкисвб #мониторселфи #селфи #гаджеты",
+  "publish_at": "2026-10-20T10:00:00+03:00",
+  "board": "main",
+  "tiktok_at": "2026-10-19T20:05:00+03:00",
+  "pinterest_at": "2026-10-19T21:55:00+03:00",
+  "buffer_tiktok": "{\"query\": \"query{__typename}\"}",
+  "buffer_pinterest": "{\"query\": \"mutation($i:CreatePostInput!){createPost(input:$i){__typename ... on PostActionSuccess{post{id status dueAt}} ... on MutationError{message}}}\", \"variables\": {\"i\": {\"channelId\": \"6acf626e778b240e2f06a42e\", \"text\": \"Мини-монитор для селфи — крепится на телефон и показывает, как ты выглядишь в кадре основной камеры.\\n\\nWB, арт. 929672116\\nOzon, арт. 3941041946\\n\\n#находкисвб #мониторселфи #селфи #гаджеты\", \"assets\": [{\"video\": {\"url\": \"https://raw.githubusercontent.com/contentmakerliza-art/eink-roliki/main/monitors/mini_16_mirror.mp4\"}}], \"mode\": \"customScheduled\", \"dueAt\": \"2026-10-19T21:55:00+03:00\", \"schedulingType\": \"automatic\", \"metadata\": {\"pinterest\": {\"boardServiceId\": \"1092334153311701760\", \"title\": \"Магнит щёлк — и видишь себя на основной камере ✨\", \"url\": \"https://wildberries.ru/catalog/0/search.aspx?search=WW1242481\"}}}}}",
+  "buffer_both": "{\"query\": \"mutation($i:CreatePostInput!){createPost(input:$i){__typename ... on PostActionSuccess{post{id status dueAt}} ... on MutationError{message}}}\", \"variables\": {\"i\": {\"channelId\": \"6acf626e778b240e2f06a42e\", \"text\": \"Мини-монитор для селфи — крепится на телефон и показывает, как ты выглядишь в кадре основной камеры.\\n\\nWB, арт. 929672116\\nOzon, арт. 3941041946\\n\\n#находкисвб #мониторселфи #селфи #гаджеты\", \"assets\": [{\"video\": {\"url\": \"https://raw.githubusercontent.com/contentmakerliza-art/eink-roliki/main/monitors/mini_16_mirror.mp4\"}}], \"mode\": \"customScheduled\", \"dueAt\": \"2026-10-19T21:55:00+03:00\", \"schedulingType\": \"automatic\", \"metadata\": {\"pinterest\": {\"boardServiceId\": \"1092334153311701760\", \"title\": \"Магнит щёлк — и видишь себя на основной камере ✨\", \"url\": \"https://wildberries.ru/catalog/0/search.aspx?search=WW1242481\"}}}}}"
+ },
+ {
   "id": "MON_mini_12v_unbox_brunette",
   "date": "2026-10-20",
   "file_url": "https://raw.githubusercontent.com/contentmakerliza-art/eink-roliki/main/monitors/mini_12w_unbox_brunette.mp4",
