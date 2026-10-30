@@ -1,0 +1,40 @@
+Музыка для роликов «Мониторы для селфи» — YouTube Studio → Аудиотека (Audio Library), скачано 30.10.2026 с аккаунта contentmakerliza (канал «E-ink Cases»).
+Лицензия у всех: YouTube Audio Library License — «Указывать авторство не обязательно» (Attribution not required).
+
+файл | название | автор | жанр / настроение | лицензия
+01_Back To The Start - Patrick Jordan Patrikios.mp3 | Back To The Start | Patrick Jordan Patrikios | Dance & Electronic / Bright | YouTube Audio Library — Attribution not required
+02_Paradise - Anno Domini Beats.mp3 | Paradise | Anno Domini Beats | Pop / Happy | YouTube Audio Library — Attribution not required
+03_Cruise control - Patrick Patrikios.mp3 | Cruise control | Patrick Patrikios | Pop / Funky | YouTube Audio Library — Attribution not required
+04_A Stroll - The Grey Room _ Density & Time.mp3 | A Stroll | The Grey Room / Density & Time | Hip-Hop & Rap / Happy | YouTube Audio Library — Attribution not required
+05_After Sunset - Alex Jones _ Xander Jones.mp3 | After Sunset | Alex Jones / Xander Jones | Dance & Electronic / Happy | YouTube Audio Library — Attribution not required
+06_Eyes - Patrick Jordan Patrikios.mp3 | Eyes | Patrick Jordan Patrikios | Dance & Electronic / Bright | YouTube Audio Library — Attribution not required
+07_Comin Wit It - Anno Domini Beats.mp3 | Comin Wit It | Anno Domini Beats | Hip-Hop & Rap / Funky | YouTube Audio Library — Attribution not required
+08_Boogie Down - The Grey Room _ Golden Palms.mp3 | Boogie Down | The Grey Room / Golden Palms | Pop / Funky | YouTube Audio Library — Attribution not required
+09_Planet zoid - Patrick Patrikios.mp3 | Planet zoid | Patrick Patrikios | Pop / Funky | YouTube Audio Library — Attribution not required
+10_Floating On Fire - The Grey Room _ Density & Time.mp3 | Floating On Fire | The Grey Room / Density & Time | Hip-Hop & Rap / Happy | YouTube Audio Library — Attribution not required
+11_Time of your life - Patrick Jordan Patrikios.mp3 | Time of your life | Patrick Jordan Patrikios | Dance & Electronic / Bright | YouTube Audio Library — Attribution not required
+12_Drum Or Bass - Ryan Stasik.mp3 | Drum Or Bass | Ryan Stasik | Dance & Electronic / Funky | YouTube Audio Library — Attribution not required
+
+Какой трек в каком ролике (переозвучка 30.10.2026 после страйка; +N с = трек начат с N-й секунды, чтобы пропустить тихое интро):
+monitors/mini_27_white_blouse.mp4 ← 01_Back To The Start - Patrick Jordan Patrikios.mp3 (+0s)
+monitors/big_03_bag.mp4 ← 02_Paradise - Anno Domini Beats.mp3 (+8s)
+monitors/big_04_lying.mp4 ← 03_Cruise control - Patrick Patrikios.mp3 (+12s)
+monitors/big_05_mirror_tripod.mp4 ← 04_A Stroll - The Grey Room _ Density & Time.mp3 (+12s)
+monitors/big_06_unbox_bed.mp4 ← 05_After Sunset - Alex Jones _ Xander Jones.mp3 (+80s)
+monitors/big_07_orange.mp4 ← 06_Eyes - Patrick Jordan Patrikios.mp3 (+16s)
+monitors/big_08_unbox_plaid.mp4 ← 07_Comin Wit It - Anno Domini Beats.mp3 (+4s)
+monitors/big_09_white_top.mp4 ← 08_Boogie Down - The Grey Room _ Golden Palms.mp3 (+8s)
+monitors/big_10_purple.mp4 ← 09_Planet zoid - Patrick Patrikios.mp3 (+0s)
+monitors/short_04.mp4 ← 10_Floating On Fire - The Grey Room _ Density & Time.mp3 (+4s)
+monitors/short_11.mp4 ← 11_Time of your life - Patrick Jordan Patrikios.mp3 (+8s)
+monitors/short_12.mp4 ← 12_Drum Or Bass - Ryan Stasik.mp3 (+16s)
+monitors/ZAPAS_MON_2026-10-23_02.mp4 ← 01_Back To The Start - Patrick Jordan Patrikios.mp3 (+0s)
+monitors/ZAPAS_MON_2026-10-23_04.mp4 ← 02_Paradise - Anno Domini Beats.mp3 (+8s)
+monitors/ZAPAS_MON_2026-10-23_07.mp4 ← 03_Cruise control - Patrick Patrikios.mp3 (+12s)
+monitors/ZAPAS_MON_2026-10-24_01.mp4 ← 04_A Stroll - The Grey Room _ Density & Time.mp3 (+12s)
+monitors/ZAPAS_MON_2026-10-24_02.mp4 ← 05_After Sunset - Alex Jones _ Xander Jones.mp3 (+80s)
+monitors/ZAPAS_MON_2026-10-24_03.mp4 ← 06_Eyes - Patrick Jordan Patrikios.mp3 (+16s)
+monitors/ZAPAS_MON_2026-10-24_04.mp4 ← 07_Comin Wit It - Anno Domini Beats.mp3 (+4s)
+monitors/ZAPAS_MON_2026-10-24_05.mp4 ← 08_Boogie Down - The Grey Room _ Golden Palms.mp3 (+8s)
+monitors/ZAPAS_MON_2026-10-24_06.mp4 ← 09_Planet zoid - Patrick Patrikios.mp3 (+0s)
+monitors/ZAPAS_MON_2026-10-24_07.mp4 ← 10_Floating On Fire - The Grey Room _ Density & Time.mp3 (+4s)
